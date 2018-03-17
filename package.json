@@ -1,8 +1,7 @@
 {
   "name": "static-web",
   "version": "0.1.0",
-  "description":
-    "automation system for creating static websites using Postcss, ES6, Autoreload, Concatenation, Minification, Deployment",
+  "description": "automation system for creating static websites using Postcss, ES6, Autoreload, Concatenation, Minification, Deployment",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,7 +33,9 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^3.1.2",
+    "gulp-plumber": "^1.2.0"
   },
   "dependencies": {}
 }
