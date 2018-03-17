@@ -1,0 +1,6 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "import/no-extraneous-dependencies": false
+  }
+}
