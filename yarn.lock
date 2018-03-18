@@ -1726,6 +1726,18 @@ css-color-names@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
+css-font-style-keywords@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/css-font-style-keywords/-/css-font-style-keywords-1.0.1.tgz#5c3532813f63b4a1de954d13cea86ab4333409e4"
+
+css-font-weight-keywords@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/css-font-weight-keywords/-/css-font-weight-keywords-1.0.0.tgz#9bc04671ac85bc724b574ef5d3ac96b0d604fd97"
+
+css-font-weight-names@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/css-font-weight-names/-/css-font-weight-names-0.2.1.tgz#5710d485ad295f6b3f1ceec41f882e324a46b516"
+
 css-select-base-adapter@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/css-select-base-adapter/-/css-select-base-adapter-0.1.0.tgz#0102b3d14630df86c3eb9fa9f5456270106cf990"
@@ -3277,6 +3289,17 @@ gulp-ejs@^3.1.2:
     safe-buffer "^5.0.1"
     through2 "2.0.3"
 
+gulp-font2css@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gulp-font2css/-/gulp-font2css-0.1.2.tgz#c330fdc770be4023217329b19a35e7c014552218"
+  dependencies:
+    css-font-style-keywords "^1.0.1"
+    css-font-weight-keywords "^1.0.0"
+    css-font-weight-names "^0.2.1"
+    gulp-util "^3.0.7"
+    mime "^1.3.4"
+    through2 "^2.0.0"
+
 gulp-htmlmin@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/gulp-htmlmin/-/gulp-htmlmin-4.0.0.tgz#266feaed83588838aedda3666f67d057ec120313"
@@ -4717,6 +4740,10 @@ mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.18, mime-types@~2.1.7:
 mime@1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.4.tgz#115f9e3b6b3daf2959983cb38f149a2d40eb5d53"
+
+mime@^1.3.4:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
 
 mimic-fn@^1.0.0:
   version "1.2.0"
