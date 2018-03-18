@@ -1,10 +1,15 @@
 {
   "name": "static-web",
   "version": "0.1.0",
-  "description": "automation system for creating static websites using Postcss, ES6, Autoreload, Concatenation, Minification, Deployment",
+  "description":
+    "automation system for creating static websites using Postcss, ES6, Autoreload, Concatenation, Minification, Deployment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rimraf ./docs",
+    "build": "gulp build",
+    "start": "gulp start",
+    "deploy": "gulp deploy",
+    "preview": "gulp preview"
   },
   "repository": {
     "type": "git",
@@ -56,6 +61,7 @@
     "normalize.css": "^8.0.0",
     "postcss-easy-import": "^3.0.0",
     "precss": "^3.1.2",
+    "rimraf": "^2.6.2",
     "webpack-stream": "^4.0.2"
   },
   "dependencies": {}
