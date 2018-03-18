@@ -2,7 +2,7 @@
   "name": "static-web",
   "version": "0.1.0",
   "description":
-    "automation system for creating static websites using Postcss, ES6, Autoreload, Concatenation, Minification, Deployment",
+    "Automation System built with Gulp for generating static websites with EJS, PostCSS, ES6, Autoreload, Favicon generator, Minification, Autoprefixer, Image Optimization",
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf ./docs",
