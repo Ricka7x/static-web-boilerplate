@@ -1,3 +1,3 @@
 const gulp = require('gulp')
 
-gulp.task('start', ['templates', 'styles'])
+gulp.task('start', ['templates', 'styles', 'scripts'])

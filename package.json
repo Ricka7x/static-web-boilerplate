@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/Ricka7x/static-web-boilerplate#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -39,7 +42,8 @@
     "gulp-postcss": "^7.0.1",
     "normalize.css": "^8.0.0",
     "postcss-easy-import": "^3.0.0",
-    "precss": "^3.1.2"
+    "precss": "^3.1.2",
+    "webpack-stream": "^4.0.2"
   },
   "dependencies": {}
 }
