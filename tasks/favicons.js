@@ -10,7 +10,7 @@ gulp.task('generate-favicon', done => {
   realFavicon.generateFavicon(
     {
       masterPicture: `${routes.dev}/${routes.assets}/images/leaf.png`,
-      dest: `${routes.prod}/${routes.assets}/images/icons`,
+      dest: `${routes.prod}/${routes.assets}/images/favicons`,
       iconsPath: `${routes.assets}/images/favicons`,
       design: {
         ios: {
