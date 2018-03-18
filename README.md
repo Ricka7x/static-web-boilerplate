@@ -10,11 +10,11 @@ git clone https://github.com/Ricka7x/static-web-boilerplate.git name-of-your-rep
 
 3.  customize your README.md to fit your needs
 
+4.  run `$ yarn` or `$ npm install`
+
 ## Running the app
 
-```
-$ yarn start or npm run start
-```
+`$ yarn start` or `$ npm run start`
 
 ## Adding pages
 
