@@ -6,19 +6,19 @@ const sourcemaps = require('gulp-sourcemaps')
 const cssnano = require('gulp-cssnano')
 const rev = require('gulp-rev')
 const uglify = require('gulp-uglify')
-const routes = require('../routes')
+const { src, dev, prod } = require('../config')
 
 gulp.task('templates', () =>
   gulp
-    .src(`${routes.src}/templates/*.ejs`)
+    .src(`${src}/templates/*.ejs`)
     .pipe(plumber())
     .pipe(ejs({}, {}, { ext: '.html' }))
-    .pipe(gulp.dest(routes.dev))
+    .pipe(gulp.dest(dev))
 )
 
 gulp.task('optimize-html-css-js', () =>
   gulp
-    .src(`${routes.dev}/**/*.html`)
+    .src(`${dev}/**/*.html`)
     .pipe(
       usemin({
         js: [
@@ -36,5 +36,5 @@ gulp.task('optimize-html-css-js', () =>
       })
     )
     .on('error', err => console.log(err)) // eslint-disable-line no-console
-    .pipe(gulp.dest(routes.prod))
+    .pipe(gulp.dest(prod))
 )

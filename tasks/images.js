@@ -1,16 +1,16 @@
 const gulp = require('gulp')
 const imagemin = require('gulp-imagemin')
-const routes = require('../routes')
+const { src, dev, assets, prod } = require('../config')
 
 gulp.task('images', () =>
   gulp
-    .src(`${routes.src}/${routes.assets}/images/*`)
-    .pipe(gulp.dest(`${routes.dev}/${routes.assets}/images`))
+    .src(`${src}/${assets}/images/*`)
+    .pipe(gulp.dest(`${dev}/${assets}/images`))
 )
 
 gulp.task('optimize-images', () =>
   gulp
-    .src(`${routes.dev}/${routes.assets}/images/*`)
+    .src(`${dev}/${assets}/images/*`)
     .pipe(imagemin())
-    .pipe(gulp.dest(`${routes.prod}/${routes.assets}/images`))
+    .pipe(gulp.dest(`${prod}/${assets}/images`))
 )

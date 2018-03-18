@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+src/assets/fonts/node_modules
 
 # testing
 /coverage

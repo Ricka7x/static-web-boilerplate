@@ -1,11 +1,11 @@
 const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const webpack = require('webpack-stream')
-const routes = require('../routes')
+const { src, dev, assets } = require('../config')
 
 gulp.task('scripts', () =>
   gulp
-    .src(`${routes.src}/${routes.assets}/scripts/main.js`)
+    .src(`${src}/${assets}/scripts/main.js`)
     .pipe(plumber())
     .pipe(
       webpack({
@@ -23,5 +23,5 @@ gulp.task('scripts', () =>
         }
       })
     )
-    .pipe(gulp.dest(`${routes.dev}/${routes.assets}/scripts`))
+    .pipe(gulp.dest(`${dev}/${assets}/scripts`))
 )

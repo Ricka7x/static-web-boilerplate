@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const watch = require('gulp-watch')
 const bs = require('browser-sync').create()
-const routes = require('../routes')
+const { src, dev, assets } = require('../config')
 
 gulp.task(
   'start',
@@ -10,29 +10,25 @@ gulp.task(
     bs.init({
       notify: false,
       server: {
-        baseDir: routes.dev
+        baseDir: dev
       }
     })
 
-    watch(`${routes.src}/${routes.assets}/styles/**/*.css`, () =>
-      gulp.start('refreshCSS')
-    )
+    watch(`${src}/${assets}/styles/**/*.css`, () => gulp.start('refreshCSS'))
 
-    watch(`${routes.src}/${routes.assets}/scripts/**/*.js`, () =>
-      gulp.start('refreshJS')
-    )
+    watch(`${src}/${assets}/scripts/**/*.js`, () => gulp.start('refreshJS'))
 
-    watch(`${routes.src}/templates/**/*.ejs`, () => gulp.start('templates'))
-    watch(`${routes.dev}/*.html`, () => bs.reload())
+    watch(`${src}/templates/**/*.ejs`, () => gulp.start('templates'))
+    watch(`${dev}/*.html`, () => bs.reload())
 
-    watch(`${routes.src}/${routes.assets}/images/*`, () => gulp.start('images'))
+    watch(`${src}/${assets}/images/*`, () => gulp.start('images'))
 
-    watch(`${routes.src}/${routes.assets}/fonts/*`, () => gulp.start('fonts'))
+    watch(`${src}/${assets}/fonts/*`, () => gulp.start('fonts'))
   }
 )
 
 gulp.task('refreshCSS', ['styles'], () =>
-  gulp.src(`${routes.src}/${routes.assets}/styles/main.css`).pipe(bs.stream())
+  gulp.src(`${src}/${assets}/styles/main.css`).pipe(bs.stream())
 )
 
 gulp.task('refreshJS', ['scripts'], () => {

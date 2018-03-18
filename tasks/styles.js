@@ -4,11 +4,11 @@ const postcss = require('gulp-postcss')
 const easyimport = require('postcss-easy-import')
 const autoprefixer = require('autoprefixer')
 const precss = require('precss')
-const routes = require('../routes')
+const { src, dev, assets } = require('../config')
 
 gulp.task('styles', () =>
   gulp
-    .src(`${routes.src}/${routes.assets}/styles/main.css`)
+    .src(`${src}/${assets}/styles/main.css`)
     .pipe(plumber())
     .pipe(
       postcss([
@@ -18,5 +18,5 @@ gulp.task('styles', () =>
       ])
     )
     .on('error', err => console.log(err)) // eslint-disable-line  no-console
-    .pipe(gulp.dest(`${routes.dev}/${routes.assets}/styles`))
+    .pipe(gulp.dest(`${dev}/${assets}/styles`))
 )
