@@ -4,7 +4,6 @@ const plumber = require('gulp-plumber')
 const usemin = require('gulp-usemin')
 const sourcemaps = require('gulp-sourcemaps')
 const cssnano = require('gulp-cssnano')
-const htmlmin = require('gulp-htmlmin')
 const rev = require('gulp-rev')
 const uglify = require('gulp-uglify')
 const routes = require('../routes')
@@ -22,7 +21,6 @@ gulp.task('optimize-html-css-js', () =>
     .src(`${routes.dev}/**/*.html`)
     .pipe(
       usemin({
-        html: [() => htmlmin({ collapseWhitespace: true })],
         js: [
           () => sourcemaps.init({ loadMaps: true }),
           () => rev(),

@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "gulp-real-favicon": "^0.2.2"
+  }
+}
