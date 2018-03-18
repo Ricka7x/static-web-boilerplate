@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const postcss = require('gulp-postcss')
 const easyimport = require('postcss-easy-import')
+const autoprefixer = require('autoprefixer')
 const precss = require('precss')
 const routes = require('../routes')
 
@@ -12,7 +13,8 @@ gulp.task('styles', () =>
     .pipe(
       postcss([
         easyimport({ prefix: '_', extensions: ['.css', '.scss'] }),
-        precss({})
+        precss({}),
+        autoprefixer({ browsers: ['last 2 versions'] })
       ])
     )
     .on('error', err => console.log(err)) // eslint-disable-line  no-console
