@@ -46,5 +46,7 @@
     "precss": "^3.1.2",
     "webpack-stream": "^4.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-watch": "^5.0.0"
+  }
 }
