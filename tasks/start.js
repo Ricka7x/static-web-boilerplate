@@ -3,7 +3,7 @@ const watch = require('gulp-watch')
 const bs = require('browser-sync').create()
 const routes = require('../routes')
 
-gulp.task('start', ['templates', 'styles', 'scripts'], () => {
+gulp.task('start', ['templates', 'styles', 'scripts', 'images'], () => {
   bs.init({
     notify: false,
     server: {
@@ -21,6 +21,8 @@ gulp.task('start', ['templates', 'styles', 'scripts'], () => {
 
   watch(`${routes.src}/templates/**/*.ejs`, () => gulp.start('templates'))
   watch(`${routes.dev}/*.html`, () => bs.reload())
+
+  watch(`${routes.src}/${routes.assets}/images/*`, () => gulp.start('images'))
 })
 
 gulp.task('refreshCSS', ['styles'], () =>

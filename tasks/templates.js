@@ -17,7 +17,7 @@ gulp.task('templates', () =>
     .pipe(gulp.dest(routes.dev))
 )
 
-gulp.task('html-css-js', () =>
+gulp.task('optimize-html-css-js', () =>
   gulp
     .src(`${routes.dev}/**/*.html`)
     .pipe(

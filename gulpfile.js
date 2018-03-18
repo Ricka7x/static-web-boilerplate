@@ -1,5 +1,6 @@
 require('./tasks/styles')
 require('./tasks/scripts')
 require('./tasks/templates')
+require('./tasks/images')
 require('./tasks/start')
 require('./tasks/build')

@@ -1,3 +1,3 @@
 const gulp = require('gulp')
 
-gulp.task('build', ['html-css-js'])
+gulp.task('build', ['optimize-html-css-js', 'optimize-images'])
