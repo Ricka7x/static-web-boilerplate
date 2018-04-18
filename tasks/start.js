@@ -14,7 +14,7 @@ gulp.task(
       }
     })
 
-    watch(`${src}/${assets}/styles/**/*.css`, () => gulp.start('refreshCSS'))
+    watch(`${src}/${assets}/styles/**/*.scss`, () => gulp.start('refreshCSS'))
 
     watch(`${src}/${assets}/scripts/**/*.js`, () => gulp.start('refreshJS'))
 
@@ -28,7 +28,7 @@ gulp.task(
 )
 
 gulp.task('refreshCSS', ['styles'], () =>
-  gulp.src(`${src}/${assets}/styles/main.css`).pipe(bs.stream())
+  gulp.src(`${src}/${assets}/styles/main.scss`).pipe(bs.stream())
 )
 
 gulp.task('refreshJS', ['scripts'], () => {
