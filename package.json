@@ -1,8 +1,7 @@
 {
   "name": "static-web",
   "version": "0.1.0",
-  "description":
-    "Automation System built with Gulp for generating static websites with EJS, PostCSS, ES6, Autoreload, Favicon generator, Minification, Autoprefixer, Image Optimization",
+  "description": "Automation System built with Gulp for generating static websites with EJS, PostCSS, ES6, Autoreload, Favicon generator, Minification, Autoprefixer, Image Optimization",
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf ./docs",
@@ -58,7 +57,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-real-favicon": "^0.2.2",
     "gulp-rev": "^8.1.1",
-    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^3.0.0",
