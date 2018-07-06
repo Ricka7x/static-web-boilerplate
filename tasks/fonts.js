@@ -7,6 +7,7 @@ gulp.task('fonts', () =>
   gulp
     .src(`${src}/${assets}/fonts/**/*.{otf,ttf,woff,woff2}`)
     .pipe(font2css())
-    .pipe(concat('_fonts.css'))
+    .pipe(concat('_fonts.scss'))
     .pipe(gulp.dest(`${src}/${assets}/styles/`))
 )
+
